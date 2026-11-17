@@ -1,0 +1,133 @@
+{
+  "public": {
+    "trials": 70,
+    "verifier_overrides": 1,
+    "overrides_that_changed_amount": 1,
+    "events": [
+      {
+        "run_id": "R-swarm_verified-C-002-s55",
+        "claim_id": "C-002",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 5,
+            "structured": 2
+          }
+        },
+        "amount_before": 20000,
+        "amount_after": 0
+      }
+    ]
+  },
+  "adversarial": {
+    "trials": 50,
+    "verifier_overrides": 8,
+    "overrides_that_changed_amount": 5,
+    "events": [
+      {
+        "run_id": "R-swarm_verified-C-B01-s55",
+        "claim_id": "C-B01",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 6,
+            "structured": 1
+          }
+        },
+        "amount_before": 30000,
+        "amount_after": 0
+      },
+      {
+        "run_id": "R-swarm_verified-C-B02-s55",
+        "claim_id": "C-B02",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 1,
+            "structured": 5
+          }
+        },
+        "amount_before": 0,
+        "amount_after": 30000
+      },
+      {
+        "run_id": "R-swarm_verified-C-B04-s55",
+        "claim_id": "C-B04",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 7,
+            "structured": 2
+          }
+        },
+        "amount_before": 25000,
+        "amount_after": 0
+      },
+      {
+        "run_id": "R-swarm_verified-C-B05-s55",
+        "claim_id": "C-B05",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 1,
+            "structured": 5
+          }
+        },
+        "amount_before": 0,
+        "amount_after": 20000
+      },
+      {
+        "run_id": "R-swarm_verified-C-B06-s55",
+        "claim_id": "C-B06",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 9,
+            "structured": 4
+          }
+        },
+        "amount_before": 35000,
+        "amount_after": 35000
+      },
+      {
+        "run_id": "R-swarm_verified-C-B07-s55",
+        "claim_id": "C-B07",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 3,
+            "structured": 2
+          }
+        },
+        "amount_before": 35000,
+        "amount_after": 0
+      },
+      {
+        "run_id": "R-swarm_verified-C-B08-s55",
+        "claim_id": "C-B08",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 1,
+            "structured": 4
+          }
+        },
+        "amount_before": 100000,
+        "amount_after": 100000
+      },
+      {
+        "run_id": "R-swarm_verified-C-B10-s55",
+        "claim_id": "C-B10",
+        "seed": 55,
+        "mismatches": {
+          "delay_days": {
+            "used": 10,
+            "structured": 3
+          }
+        },
+        "amount_before": 40000,
+        "amount_after": 40000
+      }
+    ]
+  }
+}

@@ -48,9 +48,9 @@ Trial fail duy nhất: swarm `R-swarm-C-002-s55` (`status resolved != denied`), 
 
 - Crash safety: **20/20** (`src/reports/crash.json`).
 - Ma trận student (`pytest -m student`): 248 passed trên 4 shape. Cổng host `pytest -q` xanh, gồm 33 test nhóm thêm: 29 của orchestrator/ledger (crash 3 điểm, approval hỏng, secret, ticket override, trần theo đơn, chạy trên cả 3 shape) và 4 của workflow/single (`test_student_cases.py`: needs_info, escalated, denied, resolved).
-- Không chạy tự kiểm `student_drop/` vì nhóm chưa có thư mục này trên máy.
+- Tự kiểm `student_drop/` (`src/reports/hidden_selfcheck.json`, 40 claim × 5 seed × 3 shape = 600 trial): 0 trial lỗi, 0 `leak_suspect`, cả 3 shape cho cùng `status` và `proposal_amount` trên mọi seed. Bộ này không có nhãn nên không ra pass rate; nhóm đối chiếu tay 40 claim của workflow với `docs/business_rules.md` và không thấy claim nào lệch luật. Điểm hidden chính thức do grader giảng viên chấm.
 
-Quyết định kiến trúc và lý do: xem `report/team/decision_adr.md` (chọn **workflow**). Phiếu nghiên cứu và ablation: xem `report/team/research_card.md` (R1: workflow → orchestrator giữ pass, tăng cost/success +61%).
+Quyết định kiến trúc và lý do: xem `report/team/decision_adr.md` (chọn **workflow**). Phiếu nghiên cứu và ablation: xem `report/team/research_card.md` (R1: workflow → orchestrator giữ pass, tăng cost/success +61%). Bonus B3 (verifier cho swarm): xem `report/team/bonus_report.md` (swarm_verified về bằng workflow: public 0.986 → 1.000, bộ đối kháng tự viết 0.900 → 1.000, nhưng vẫn đắt hơn workflow ~70%).
 
 ## 5. Khó khăn và cách xử lý
 
@@ -65,7 +65,7 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md` (bảng �
 
 ## 7. Hạn chế và hướng cải thiện
 
-MockLLM không phải model sản xuất; latency là `unavailable`; cost là VND mô phỏng. Bộ public chỉ 14 claim và dễ hơn hidden, nên pass 1.000 trên public không chứng minh hidden đạt 1.000. Vì MockLLM tất định, benchmark không đo được trường hợp model thật đọc sai tool output; với model thật, single/orchestrator có thể có variance mà workflow không có. Kết luận "chọn workflow" sẽ đổi nếu task cần phán đoán ngôn ngữ thật (xác minh hỏng hàng từ mô tả/ảnh) hoặc có nhiều nguồn dữ kiện độc lập điều tra song song được. Hướng cải thiện: chạy tự kiểm `student_drop/` khi có, thêm claim adversarial (ticket trích policy cũ, mã đơn trong chữ ticket) vào test.
+MockLLM không phải model sản xuất; latency là `unavailable`; cost là VND mô phỏng. Bộ public chỉ 14 claim và dễ hơn hidden, nên pass 1.000 trên public không chứng minh hidden đạt 1.000. Vì MockLLM tất định, benchmark không đo được trường hợp model thật đọc sai tool output; với model thật, single/orchestrator có thể có variance mà workflow không có. Kết luận "chọn workflow" sẽ đổi nếu task cần phán đoán ngôn ngữ thật (xác minh hỏng hàng từ mô tả/ảnh) hoặc có nhiều nguồn dữ kiện độc lập điều tra song song được. Hướng cải thiện: thêm claim adversarial (ticket trích policy cũ, mã đơn trong chữ ticket) vào test.
 
 ## 8. Tài liệu tham khảo
 
