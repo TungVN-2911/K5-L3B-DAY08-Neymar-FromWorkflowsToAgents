@@ -6,7 +6,7 @@ Tối đa 5 trang ngoài phụ lục. Số liệu lấy từ file trong `src/rep
 
 - Tên nhóm: Neymar
 - Thành viên: xem `TEAM.md` (Vũ Ngọc Tùng, Nguyễn Ngọc Bách)
-- Commit chốt (trùng `report/team/decision_adr.md`): COMMIT_PENDING
+- Commit chốt (trùng `report/team/decision_adr.md`): ffc23fc
 
 ## 2. Mục tiêu và cách tiếp cận
 
