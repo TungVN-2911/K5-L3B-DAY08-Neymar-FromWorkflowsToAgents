@@ -28,10 +28,4 @@ class Trace:
             "events": self.events,
         }
         self.path.write_text(json.dumps(body, ensure_ascii=False, indent=2), encoding="utf-8")
-        import time, os
-        try:
-            now = time.time()
-            os.utime(self.path, (now, now))
-        except OSError:
-            pass
         return str(self.path)

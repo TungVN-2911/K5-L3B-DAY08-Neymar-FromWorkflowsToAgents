@@ -8,7 +8,7 @@ from lab8.db import connect
 from lab8.durability import InjectedCrash
 from lab8.shapes import SHAPES
 
-SHAPES_UNDER_TEST = ["orchestrator"]
+SHAPES_UNDER_TEST = ["orchestrator", "workflow", "single"]
 CRASH_POINTS = ["before_effect", "after_effect_before_checkpoint", "after_checkpoint"]
 
 
