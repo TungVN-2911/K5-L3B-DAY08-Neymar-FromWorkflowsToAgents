@@ -5,14 +5,14 @@
 - Tên nhóm: Neymar
 - Lớp: L3B
 - Repo nhóm:  K5-L3B-DAY08-Neymar-FromWorkflowsToAgents
-- URL repo, nhánh nộp, commit chốt: https://github.com/TungVN-2911/K5-L3B-DAY08-Neymar-FromWorkflowsToAgents.git, main, 
+- URL repo, nhánh nộp, commit chốt: https://github.com/TungVN-2911/K5-L3B-DAY08-Neymar-FromWorkflowsToAgents.git, main, ffc23fc
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Vũ Ngọc Tùng | 2A202604106 | vungoctung098@gmail.com | TungVN-2911 |         |
-|   2 | Nguyễn Ngọc Bách | 2A202604108 | bachnguyenfptu@gmail.com | bachnguyen2001 |         |
+|   1 | Vũ Ngọc Tùng | 2A202604106 | vungoctung098@gmail.com | TungVN-2911 | Orchestrator + handoff; ledger + evaluation |
+|   2 | Nguyễn Ngọc Bách | 2A202604108 | bachnguyenfptu@gmail.com | bachnguyen2001 | Workflow + integration; single |
 
 ## Bảng đóng góp
 
@@ -20,7 +20,8 @@
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| | | | |
+| Vũ Ngọc Tùng | Orchestrator + handoff; ledger + evaluation | 491b19e (implement orchestrator), 9c801da (orchestrator test), 2626f09 (ledger test) | `src/tests/test_orchestrator_extra.py` (handoff allowlist, canary 5 seed, ticket override C-002 s55, trần theo đơn T14); `src/tests/test_ledger_extra.py` (crash 3 điểm, approval revoked/claim khác/thiếu, approval hết hạn) |
+| Nguyễn Ngọc Bách | Workflow + integration; single | b4e8a6c (workflow + single) | Chưa có test riêng — cần bổ sung |
 
 ## Cá nhân
 
