@@ -22,7 +22,7 @@ Người 2 trong nhóm 2 người: shape C `orchestrator` và handoff (`src/lab8
 ## 4. Bằng chứng
 
 - Ma trận student: `python -m pytest -q -m student -o addopts=` → 248 passed; orchestrator 62/62.
-- Cổng host `python -m pytest -q` xanh, gồm 29 test nhóm thêm.
+- Cổng host `python -m pytest -q` xanh (87 passed), trong đó 29 test do mình thêm.
 - `src/reports/crash.json`: `crash_safety` 20/20.
 - `src/reports/benchmark.json`: orchestrator pass 1.000, pass^5 1.000, variance 0, cost/success 46.43 VND; run id ví dụ `R-orchestrator-C-002-s55`.
 - `src/reports/ablation_r1_workflow_vs_orchestrator.json`: cost/success 28.79 → 46.43 (+61%), pass không đổi.

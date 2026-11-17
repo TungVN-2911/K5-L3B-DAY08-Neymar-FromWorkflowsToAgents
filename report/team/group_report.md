@@ -6,7 +6,7 @@ Tối đa 5 trang ngoài phụ lục. Số liệu lấy từ file trong `src/rep
 
 - Tên nhóm: Neymar
 - Thành viên: xem `TEAM.md` (Vũ Ngọc Tùng, Nguyễn Ngọc Bách)
-- Commit chốt (trùng `report/team/decision_adr.md`): ffc23fc
+- Commit chốt (trùng `report/team/decision_adr.md`): dbd3761
 
 ## 2. Mục tiêu và cách tiếp cận
 
@@ -47,7 +47,7 @@ Benchmark public (`src/reports/benchmark.json`): 14 claim × 5 seed `11,22,33,44
 Trial fail duy nhất: swarm `R-swarm-C-002-s55` (`status resolved != denied`), đúng điểm yếu tham chiếu (tin số ngày trễ trong ticket ở seed chia hết cho 5).
 
 - Crash safety: **20/20** (`src/reports/crash.json`).
-- Ma trận student (`pytest -m student`): 248 passed trên 4 shape. Cổng host `pytest -q` xanh, gồm 29 test nhóm thêm (crash 3 điểm, approval hỏng, secret, ticket override, trần theo đơn) chạy trên cả 3 shape.
+- Ma trận student (`pytest -m student`): 248 passed trên 4 shape. Cổng host `pytest -q` xanh, gồm 33 test nhóm thêm: 29 của orchestrator/ledger (crash 3 điểm, approval hỏng, secret, ticket override, trần theo đơn, chạy trên cả 3 shape) và 4 của workflow/single (`test_student_cases.py`: needs_info, escalated, denied, resolved).
 - Không chạy tự kiểm `student_drop/` vì nhóm chưa có thư mục này trên máy.
 
 Quyết định kiến trúc và lý do: xem `report/team/decision_adr.md` (chọn **workflow**). Phiếu nghiên cứu và ablation: xem `report/team/research_card.md` (R1: workflow → orchestrator giữ pass, tăng cost/success +61%).
