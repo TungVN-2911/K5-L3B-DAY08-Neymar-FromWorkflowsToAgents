@@ -22,6 +22,11 @@
 
 ## 4. Bằng chứng
 
+- File test tự viết: `src/tests/test_student_cases.py` (chạy lệnh: `pytest tests/test_student_cases.py` -> 4 passed):
+  - `test_workflow_missing_order_id_triggers_needs_info`: Xác thực Workflow phát hiện thiếu `order_id` và trả về `needs_info` an toàn, không ghi ledger bậy.
+  - `test_workflow_escalation_for_unauthorized_order`: Xác thực Workflow chuyển cấp `escalated` khi tài khoản không sở hữu đơn hàng, bảo mật PII.
+  - `test_single_react_agent_denied_below_threshold`: Xác thực Single ReAct Agent thẩm định đúng điều kiện trễ < 3 ngày và trả về `denied`.
+  - `test_single_react_agent_successful_refund`: Xác thực vòng lặp ReAct gọi các tool tuần tự, tính toán bồi thường và hoàn tiền thành công 35.000 VND.
 - Kiểm thử ma trận sinh viên:
   - `python -m pytest -q -m student -o addopts= -k workflow` -> 62 passed.
   - `python -m pytest -q -m student -o addopts= -k "single and not orchestrator and not swarm"` -> 62 passed.
