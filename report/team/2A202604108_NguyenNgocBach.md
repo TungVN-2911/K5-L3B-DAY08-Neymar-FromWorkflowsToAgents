@@ -17,7 +17,8 @@
 
 - Triển khai hoàn chỉnh `src/lab8/shapes/workflow.py`: đọc claim qua `get_claim_view`, thẩm định điều kiện `order_id`, bảo vệ privacy ranh giới thông tin với `lookup_order`, tính bồi thường bằng `compute_compensation`, hoàn tiền chuẩn với `durability.issue_refund`, hỗ trợ xử lý crash window (`crash_at`).
 - Triển khai hoàn chỉnh `src/lab8/shapes/single.py`: dựng vòng lặp ReAct agent (`run_react`) có giới hạn 8 bước (`max_steps=8`), gọi các read-only tools độc lập, tính toán tiền bồi thường chính xác bằng code, ủy quyền write cho host an toàn.
-- Cập nhật cơ chế cập nhật thời gian ghi trace (`lab8/trace.py`) nhằm đảm bảo tính toàn vẹn và chống stale trace trên môi trường Linux/WSL.
+- Thử sửa `lab8/trace.py` (cập nhật mtime khi ghi trace) để chống stale trace trên Linux/WSL; sửa này đã được gỡ (commit ffc23fc) vì grader chỉ lấy 3 file shape, và workflow/single vẫn pass với `trace.py` gốc.
+- `7d8eb4c` thêm `src/tests/test_student_cases.py`: 4 test cho workflow (thiếu order_id → needs_info, đơn không thuộc principal → escalated) và single (trễ < 3 ngày → denied, C-001 resolved 35.000 với một dòng ledger).
 - Vượt qua toàn bộ 62/62 test case student cho `workflow` và 62/62 test case student cho `single`, bao gồm các kịch bản quan trọng: T01–T10, T11 (idempotency retry), T12 (crash before checkpoint does not double pay), T13 (order already refunded cap), T14 (pay only difference).
 
 ## 4. Bằng chứng
@@ -34,6 +35,7 @@
   - `test_t11_retry_keeps_one_refund[single]` -> PASSED.
   - `test_t12_crash_before_checkpoint_does_not_double_pay[workflow]` -> PASSED.
   - `test_t12_crash_before_checkpoint_does_not_double_pay[single]` -> PASSED.
+- Test riêng: `python -m pytest -q tests/test_student_cases.py` -> 4 passed.
 - Kết quả kiểm tra từ bộ chấm `lab8.check_submission`:
   - `[ OK ] shape workflow: format đúng, 12/12 claim public pass ở seed 11`
   - `[ OK ] shape single: format đúng, 12/12 claim public pass ở seed 11`

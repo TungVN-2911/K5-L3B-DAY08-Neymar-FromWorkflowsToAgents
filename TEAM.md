@@ -5,7 +5,7 @@
 - Tên nhóm: Neymar
 - Lớp: L3B
 - Repo nhóm:  K5-L3B-DAY08-Neymar-FromWorkflowsToAgents
-- URL repo, nhánh nộp, commit chốt: https://github.com/TungVN-2911/K5-L3B-DAY08-Neymar-FromWorkflowsToAgents.git, main, ffc23fc
+- URL repo, nhánh nộp, commit chốt: https://github.com/TungVN-2911/K5-L3B-DAY08-Neymar-FromWorkflowsToAgents.git, main, eee64a9
 
 ## Thành viên
 
@@ -21,7 +21,7 @@
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
 | Vũ Ngọc Tùng | Orchestrator + handoff; ledger + evaluation | 491b19e (implement orchestrator), 9c801da (orchestrator test), 2626f09 (ledger test) | `src/tests/test_orchestrator_extra.py` (handoff allowlist, canary 5 seed, ticket override C-002 s55, trần theo đơn T14); `src/tests/test_ledger_extra.py` (crash 3 điểm, approval revoked/claim khác/thiếu, approval hết hạn) |
-| Nguyễn Ngọc Bách | Workflow + integration; single | b4e8a6c (workflow + single) | Chưa có test riêng — cần bổ sung |
+| Nguyễn Ngọc Bách | Workflow + integration; single | b4e8a6c (workflow + single), 7d8eb4c (add test) | `src/tests/test_student_cases.py` (workflow: thiếu order_id → needs_info, đơn không thuộc principal → escalated; single: trễ < 3 ngày → denied, C-001 resolved 35.000 với một dòng ledger) |
 
 ## Cá nhân
 
