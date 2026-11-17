@@ -2,22 +2,17 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- Tên nhóm: Neymar
+- Lớp: L3B
+- Repo nhóm:  K5-L3B-DAY08-Neymar-FromWorkflowsToAgents
+- URL repo, nhánh nộp, commit chốt: https://github.com/TungVN-2911/K5-L3B-DAY08-Neymar-FromWorkflowsToAgents.git, main, 
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
-
-Gợi ý chia vai:
-
-- Nhóm 6 người: integration; workflow; single agent; orchestrator; ledger/policy/crash; eval/report.
-- Nhóm 4 người: workflow + integration; single; orchestrator + handoff; ledger + evaluation.
+|   1 | Vũ Ngọc Tùng | 2A202604106 | vungoctung098@gmail.com | TungVN-2911 |         |
+|   2 | Nguyễn Ngọc Bách | 2A202604108 | bachnguyenfptu@gmail.com | bachnguyen2001 |         |
 
 ## Bảng đóng góp
 
